@@ -5,7 +5,7 @@ import { CommandInterface } from '../dto/commands';
 export function Commit({ program }: CommandInterface) {
   program
     .command('commit <message>')
-    .description('init project')
+    .description('Commit changes')
     .action(async (message) => {
       if (!shell.which('git')) {
         shell.echo('Sorry, this script requires git');

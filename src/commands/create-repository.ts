@@ -4,7 +4,7 @@ import { CommandInterface } from '../dto/commands';
 export function CreateRepository({ program }: CommandInterface) {
   program
     .command('repo <repository-name> [description]')
-    .description('init project')
+    .description('Create a new repository on GitHub.com, then push an existing repository from the command line')
     .action(async (repositoryName, description) => {
       if (!shell.which('git')) {
         shell.echo('Sorry, this script requires git');

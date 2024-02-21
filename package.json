@@ -27,6 +27,6 @@
     "typescript": "^5.3.3"
   },
   "bin": {
-    "gcli": "dist/index.js"
+    "ghelp": "dist/index.js"
   }
 }

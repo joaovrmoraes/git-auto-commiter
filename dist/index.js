@@ -146,7 +146,7 @@ var commitList = [
 
 // src/commands/commit.ts
 function Commit({ program }) {
-  program.command("commit <message>").description("init project").action((message) => __async(this, null, function* () {
+  program.command("commit <message>").description("Commit changes").action((message) => __async(this, null, function* () {
     if (!import_shelljs.default.which("git")) {
       import_shelljs.default.echo("Sorry, this script requires git");
       import_shelljs.default.exit(1);
@@ -182,7 +182,7 @@ function Commit({ program }) {
 // src/commands/create-repository.ts
 var import_shelljs2 = __toESM(require("shelljs"));
 function CreateRepository({ program }) {
-  program.command("repo <repository-name> [description]").description("init project").action((repositoryName, description) => __async(this, null, function* () {
+  program.command("repo <repository-name> [description]").description("Create a new repository on GitHub.com, then push an existing repository from the command line").action((repositoryName, description) => __async(this, null, function* () {
     if (!import_shelljs2.default.which("git")) {
       import_shelljs2.default.echo("Sorry, this script requires git");
       import_shelljs2.default.exit(1);
